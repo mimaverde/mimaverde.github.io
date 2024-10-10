@@ -2,34 +2,34 @@ const pastelColors = [
     '#FFFFFF', '#cc5ef5', '#461791'
 ];
   
-// createCircles = () => {
-//     const section = document.getElementById('bubbles');
-//     const circles = document.createElement('span');
+createCircles = () => {
+    const section = document.getElementById('bubbles');
+    const circles = document.createElement('span');
 
-//     const size = Math.random();
+    const size = Math.random();
 
-//     const maxOpacity = 40 + Math.random() * 60
-//     const blur = 1 + size * 4
+    const maxOpacity = 40 + Math.random() * 60
+    const blur = 1 + size * 4
 
 
-//     circles.style.width = 10 + (size * 25) + 'px';
-//     circles.style.height = 10 + (size * 25) + 'px';
+    circles.style.width = 10 + (size * 25) + 'px';
+    circles.style.height = 10 + (size * 25) + 'px';
 
-//     circles.style.top = Math.random() * innerHeight + 'px';
-//     circles.style.left = Math.random() * innerWidth + 'px';
+    circles.style.top = Math.random() * innerHeight + 'px';
+    circles.style.left = Math.random() * innerWidth + 'px';
 
-//     circles.style.filter = `blur(${blur}px)`;
-//     circles.style['--max-opacity'] = `${maxOpacity}%`;
+    circles.style.filter = `blur(${blur}px)`;
+    circles.style['--max-opacity'] = `${maxOpacity}%`;
 
-//     circles.style.background = pastelColors[Math.floor(Math.random() * pastelColors.length)];
-//     section.appendChild(circles);
+    circles.style.background = pastelColors[Math.floor(Math.random() * pastelColors.length)];
+    section.appendChild(circles);
 
-//     setTimeout(() => {
-//         circles.remove()
-//     }, 5000);
-// }
+    setTimeout(() => {
+        circles.remove()
+    }, 5000);
+}
 
-// setInterval(createCircles, 150);
+setInterval(createCircles, 150);
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav__link').forEach(function(link) {
