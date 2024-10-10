@@ -139,6 +139,7 @@ header {
     .header__nav[aria-expanded="true"] ul {
         visibility: visible;
         opacity: 1;
+        overflow-y: auto;
         animation: showSide 1.5s cubic-bezier(0.215, 0.610, 0.355, 1);
         transition: opacity 0.5s ease, visibility 0s 0s;
     }
