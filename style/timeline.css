@@ -1,0 +1,224 @@
+:root {
+    --timeline-default: rgba(255, 255, 255, 0.3);
+    --timeline-secondary: var(--color-1);
+    --timeline-title: #fff;
+    --timeline-font: #fff;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: left;
+    margin: 100px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--timeline-default);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline__container {
+    padding: 15px 20px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+}
+
+.timeline__container.left {
+    left: 0;
+}
+
+.timeline__container.right {
+    left: 50%;
+}
+
+.timeline__container::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: -8px;
+    background: #ffffff;
+    border: 2px solid var(--timeline-default);
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.timeline__container.right::after {
+    left: -8px;
+}
+
+.timeline__container::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    top: calc(50% - 1px);
+    right: 8px;
+    background: var(--timeline-default);
+    z-index: 1;
+}
+
+.timeline__container.right::before {
+    left: 8px;
+}
+
+.timeline__container .date {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 15px);
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--timeline-default);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.timeline__container.left .date {
+    right: -95px;
+    text-align: left;
+}
+
+.timeline__container.right .date {
+    left: -95px;
+    text-align: right;
+}
+
+.timeline__container .icon {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 9px 0;
+    top: calc(50% - 20px);
+    background: var(--timeline-secondary);
+    border: 2px solid var(--timeline-default);
+    border-radius: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--timeline-default);
+    z-index: 1;
+}
+
+.timeline__container.left .icon {
+    right: 26px;
+}
+
+.timeline__container.right .icon {
+    left: 26px;
+}
+
+.timeline__container .timeline__content {
+    padding: 20px;
+    background: var(--timeline-secondary);
+    position: relative;
+    border-radius: 10px;
+    z-index: 1; /*Hide the icon*/
+}
+
+.timeline__container.right .timeline__content {
+    padding: 20px;
+}
+
+.timeline__container .timeline__content h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--timeline-title);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.timeline__container .timeline__content h3 {
+    font-size: 0.9rem;
+}
+
+.timeline__container .timeline__content span {
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+.timeline__container .timeline__content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--timeline-font);
+    opacity: 0.8;
+}
+
+.timeline__container .timeline__description {
+    padding: 20px 40px 0 0;
+}
+
+.timeline__container.right .timeline__header {
+    padding-left: 40px;
+}
+
+.timeline__container.right .timeline__description {
+    padding: 20px 20px 0 40px;
+}
+
+@media screen and (max-width: 769px) {
+    .timeline::after {
+        left: 90px;
+    }
+
+    .timeline__container {
+        width: 100%;
+        padding-left: 120px;
+        padding-right: 20px;
+    }
+
+    .timeline__container.right {
+        left: 0%;
+    }
+
+    .timeline__container.left::after, 
+    .timeline__container.right::after {
+        left: 82px;
+    }
+
+    .timeline__container.left::before,
+    .timeline__container.right::before {
+        left: 98px;
+        border-color: transparent var(--timeline-default) transparent transparent;
+    }
+
+    .timeline__container.left .date,
+    .timeline__container.right .date {
+        right: auto;
+        left: 5px;
+    }
+
+    .timeline__container.left .icon,
+    .timeline__container.right .icon {
+        right: auto;
+        left: 146px;
+    }
+
+    .timeline__container.left .timeline__content,
+    .timeline__container.right .timeline__content {
+        padding: 20px;
+        border-radius: 20px;
+        z-index: 1;
+    }
+
+    .timeline__container.right .timeline__header {
+        padding: 0;
+    }
+
+    .timeline__container.right .timeline__description,
+    .timeline__container .timeline__description {
+        padding: 20px 0 0 0;
+    }
+}

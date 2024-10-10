@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --primary-color: #091833; 
+    --secondary-color: #cc5ef5;
+    --white: #ffffff;
+    --purple: #461791;
+
+    --font-default: "Nunito", sans-serif;
+    --font-title: "Handjet", sans-serif;
+
+    --color-1: #32687f;
+    --color-2: #880db1;
+    --color-3: #274458;
+    --color-4: var(--purple);
+    --color-5: #1c3f74;
+
+    --yellow: #F5F17D;
+    --dark-green: darkslategray;
+    --blue: #5EEAD4;
+
+    --space: 5px;
+
+    --transition: all 0.2s ease;
+
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    width: 100vw;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-size: 16px;
+    font-family: var(--font-default);
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    text-wrap: pretty;
+    text-rendering: geometricprecision;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    body[data-menu-open="true"] {
+        overflow: hidden;
+    }
+}
+
+p, a {
+    font-family: var(--font-default);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+::selection {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+a span::selection {
+    background-color: transparent;
+}
+
+.about *::selection {
+    background-color: var(--white);
+    color: var(--color-4);
+}
+
+.skills *::selection {
+    background-color: var(--yellow);
+    color: var(--primary-color);
+}
+
+.works *::selection {
+    background-color: var(--blue);
+    color: var(--color-5);
+}
+
+.page {
+    display: flex;
+    scroll-snap-align: start;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+}
+section.page:nth-child(5){ 
+    background-color: var(--color-5);
+}
+section.page:nth-child(6){
+    background-color: var(--color-2);
+}
+section.page:nth-child(3){
+    background-color: var(--color-4);
+}
+section.page:nth-child(4){
+    background-color: var(--color-3);
+}
+
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: var(--max-opacity);
+    }
+    90% {
+        opacity: var(--max-opacity);
+    }
+    100% {
+        transform: scale(1) translateY(-500%) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes showUp {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes showSide {
+    0% {
+        right: -100vw;
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes moveToTop {
+    0% {transform: translateY(100%)}
+    100% {transform: translateY(0)}
+}
+
+@keyframes moveToBottom {
+    0% {
+        transform: translateY(0);
+        visibility: visible;
+        z-index: 4;
+    }
+    100% {
+        transform: translateY(100%);
+        visibility: hidden;
+        z-index: 0;
+    }
+}
+
+@keyframes hoverBtn {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes toActive1 {
+    0%   {transform: matrix(1, 0, 0, 1, 0, 0);}
+    25%  {transform: matrix(1, 0, 0, 1, 0, 6);}
+    40%  {transform: matrix(1, 0, 0, 1, 0, 6);}
+    100% {transform: matrix(0.7071, 0.7071, -0.7071, 0.7071, 0, 11);}
+}
+@keyframes toActive2 {
+    0%   {transform: matrix(1, 0, 0, 1, 0, 0);}
+    25%  {transform: matrix(1, 0, 0, 1, 0, -6);}
+    40%  {transform: matrix(1, 0, 0, 1, 0, -6);}
+    100% {transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, 0, -6);}
+}
+
+@keyframes toNormal1 {
+    0%   {transform: matrix(0.7071, 0.7071, -0.7071, 0.7071, 0, 6);}
+    75%  {transform: matrix(1, 0, 0, 1, 0, 6);}
+    100% {transform: matrix(1, 0, 0, 1, 0, 0);}
+}
+@keyframes toNormal2 {
+    0%   {transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, 0, -6);}
+    75%  {transform: matrix(1, 0, 0, 1, 0, -6);}
+    100% {transform: matrix(1, 0, 0, 1, 0, 0);}
+}

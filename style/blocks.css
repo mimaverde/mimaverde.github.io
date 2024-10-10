@@ -1,0 +1,152 @@
+
+.block__transparent {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .block__transparent {
+        font-size: 1rem;
+    }
+}
+
+.block__image {
+    margin-bottom: -5px;
+}
+
+.block__logo {
+    filter: brightness(0) invert(1);
+}
+
+.block__blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.block__skills {
+    width: 40%;
+    align-content: center;
+}
+
+@media screen and (max-width: 960px) {
+    .block__skills {
+        width: 100%;
+        text-align: center;
+    }    
+}
+
+.block__skills .block__skills--list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.block__experiences {
+    width: 60%;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 960px) {
+    .block__experiences {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.block__skills .skill {
+    background-color: var(--color-1);
+    display: inline-block;
+    align-content: center;
+    color: var(--white);
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 960px) {
+    .block__blocks {
+        flex-direction: column;
+    }
+
+    .block__experiences {
+        font-size: 1.1rem;
+    }
+}
+
+.block__btn {
+    color: var(--dark-green);
+    text-decoration: none;
+    background-color: var(--white);
+    border-radius: 4px;
+    padding: 1px 20px;
+    font-weight: 600;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+.block__btn svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    transform: translate(-2px, 4px);
+    transition: all 0.6s ease;
+}
+
+.block__btn:hover {
+    background-color: var(--color-3);
+    color: var(--white);
+    transition: all 0.5s ease;
+    border-color: var(--white);
+}
+
+.block__btn:hover svg {
+    transform: translate(0, 0);
+    fill: var(--white);
+    transition: all 0.5s ease;
+    
+}
+
+.block__conect {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+@media screen and (max-width: 960px) {
+    .block__conect {
+        flex-direction: column;
+    }
+}
+
+.block__learn {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 30px;
+}
+
+.block__social-media {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.block__social-media li,
+.block__social-media li a {
+    width: 50px;
+    height: 50px;
+}
+
+.block__social-media img {
+    width: 100%;
+}

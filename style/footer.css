@@ -1,0 +1,38 @@
+.footer {
+    scroll-snap-align: start;
+}
+
+.footer .content {
+    padding: 3rem 0;
+}
+
+.footer__highlight {
+    font-size: 1.2rem;
+    width: 95%;
+    max-width: 320px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.footer__content {
+    margin-top: 4rem;
+}
+
+.footer svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: relative;
+    top: 4px;
+
+    path {
+        fill: var(--white);
+    }
+}
+
+.footer__small {
+    font-size: 0.8rem;
+}
+
+.footer__small a {
+    color: var(--white);
+}
