@@ -84,6 +84,8 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   margin-bottom: 0.6rem;
+  background-color: var(--blue);
+  border-radius: 20px;
 }
 
 .work__shot img {
@@ -92,5 +94,11 @@
   object-fit: cover;
   object-position: top;
   border-radius: 20px;
+}
+
+.work a:hover img {
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+  transition: all 0.5s ease;
 }
 
