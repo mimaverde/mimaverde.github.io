@@ -120,8 +120,3 @@
         font-size: 5rem; 
     }
 } 
-
-.primary {
-    scroll-snap-align: start;
-    display: flex;
-}

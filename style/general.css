@@ -99,17 +99,21 @@ section {
     min-height: 100vh;
     z-index: 1;
 }
-section.page:nth-child(5){ 
-    background-color: var(--color-5);
-}
-section.page:nth-child(6){
-    background-color: var(--color-2);
-}
-section.page:nth-child(3){
+
+section.page.about {
     background-color: var(--color-4);
 }
-section.page:nth-child(4){
+
+section.page.skills {
     background-color: var(--color-3);
+}
+
+section.page.works {
+    background-color: var(--color-5);
+}
+
+section.page.contact {
+    background-color: var(--color-2);
 }
 
 
