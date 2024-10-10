@@ -29,7 +29,13 @@
 
 .block__skills {
     width: 40%;
-    align-content: center;
+}
+
+.block__skills h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 960px) {
@@ -60,13 +66,14 @@
 }
 
 .block__skills .skill {
-    background-color: var(--color-1);
     display: inline-block;
     align-content: center;
-    color: var(--white);
-    padding: 6px 20px;
-    border-radius: 4px;
     font-weight: 600;
+    color: var(--blue);
+    background-color: rgba(94, 234, 212, 0.1);
+    font-size: 0.8rem;
+    padding: 4px 13px;
+    border-radius: 40rem;
 }
 
 @media screen and (max-width: 960px) {
