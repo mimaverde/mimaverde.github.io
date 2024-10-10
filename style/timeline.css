@@ -186,18 +186,11 @@
 
 @media screen and (max-width: 769px) {
     .timeline::after {
-        left: 90px;
-
-        /* TESTANDO */
         left: 78px;
     }
 
     .timeline__container {
         width: 100%;
-        padding-left: 120px;
-        padding-right: 20px;
-
-        /* TESTANDO */
         padding-left: 90px;
         padding-right: 0;
     }
@@ -208,17 +201,11 @@
 
     .timeline__container.left::after, 
     .timeline__container.right::after {
-        left: 82px;
-
-        /* TESTANDO */
         left: 70px;
     }
 
     .timeline__container.left::before,
     .timeline__container.right::before {
-        left: 98px;
-
-        /* TESTANDO */
         left: 78px;
         border-color: transparent var(--timeline-default) transparent transparent;
     }
