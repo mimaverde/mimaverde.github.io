@@ -1,3 +1,5 @@
+<img src="./images/euzinha.png" width="300">
+
 # Mima's Portfolio
 **Welcome to my portfolio repository!** 🎨
 
@@ -31,6 +33,6 @@ When you open the index, you'll find that this website was built entirely using 
 ## Contact Me
 If you’d like to get in touch or collaborate on a project, feel free to reach out:
 
-**Email:** <a name="mailto:verdemima@gmail.com">verdemima@gmail.com</a><br>
-**LinkedIn:** https://linkedin.com/in/mileidesilva<br>
-**Website:** https://mimaverde.github.io/
+**Email:** <a name="mailto:verdemima@gmail.com" target="_blank">verdemima@gmail.com</a><br>
+**LinkedIn:** <a name="https://linkedin.com/in/mileidesilva" target="_blank">https://linkedin.com/in/mileidesilva</a><br>
+**Website:** <a name="https://mimaverde.github.io/" target="_blank">https://mimaverde.github.io/</a>
