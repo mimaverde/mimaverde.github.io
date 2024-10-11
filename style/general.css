@@ -74,17 +74,17 @@ a span::selection {
     background-color: transparent;
 }
 
-.about *::selection {
+.page__about *::selection {
     background-color: var(--white);
     color: var(--color-4);
 }
 
-.skills *::selection {
+.page__skills *::selection {
     background-color: var(--yellow);
     color: var(--primary-color);
 }
 
-.works *::selection {
+.page__works *::selection {
     background-color: var(--blue);
     color: var(--color-5);
 }
@@ -100,19 +100,19 @@ section {
     z-index: 1;
 }
 
-section.page.about {
+section.page__about {
     background-color: var(--color-4);
 }
 
-section.page.skills {
+section.page__skills {
     background-color: var(--color-3);
 }
 
-section.page.works {
+section.page__works {
     background-color: var(--color-5);
 }
 
-section.page.contact {
+section.page__contact {
     background-color: var(--color-2);
 }
 
