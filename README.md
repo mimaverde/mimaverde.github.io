@@ -5,6 +5,8 @@
 
 This project showcases some of my most recent web development work, highlighting my skills in front-end development, WordPress, landing pages, email marketing, and troubleshooting.
 
+Link to my portfolio: https://mimaverde.github.io/
+
 ## About Me
 Hi! I'm Mima, a front-end developer specializing in WordPress and modern web solutions. My passion lies in creating user-friendly and efficient websites, tailored to meet the unique needs of clients. I have had the opportunity to work with companies in New Zealand and continue to provide freelance services internationally. My work is detail-oriented, and I love solving complex problems.
 
@@ -34,5 +36,5 @@ When you open the index, you'll find that this website was built entirely using 
 If you’d like to get in touch or collaborate on a project, feel free to reach out:
 
 **Email:** <a name="mailto:verdemima@gmail.com" target="_blank">verdemima@gmail.com</a><br>
-**LinkedIn:** <a name="https://linkedin.com/in/mileidesilva" target="_blank">https://linkedin.com/in/mileidesilva</a><br>
-**Website:** <a name="https://mimaverde.github.io/" target="_blank">https://mimaverde.github.io/</a>
+**LinkedIn:** https://linkedin.com/in/mileidesilva<br>
+**Website:** https://mimaverde.github.io/
