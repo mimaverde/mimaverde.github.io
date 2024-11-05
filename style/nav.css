@@ -7,6 +7,21 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 768px) {
+    header {
+        width: calc(100% - 1rem);
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 10px;
+        color: white;
+        border-radius: 20px;
+        margin: 0.5rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     header {
         background-color: transparent;
