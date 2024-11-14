@@ -116,8 +116,28 @@
     transform: translate(0, 0);
     fill: var(--white);
     transition: all 0.5s ease;
-    
 }
+
+
+
+
+
+
+
+
+
+
+.block__btn--purple {
+    color: var(--purple);
+    background-color: var(--white);
+}
+
+
+.block__btn--purple:hover {
+    background-color: transparent;
+}
+
+
 
 .block__conect {
     display: flex;
