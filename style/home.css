@@ -18,7 +18,7 @@
 }
 
 .cat {
-    background-image: url('../images/gatito_blur_2.png');
+    background-image: url('../images/gatito_blur_2.webp');
     background-color: var(--primary-color);
     background-repeat: no-repeat;
     background-size: cover;

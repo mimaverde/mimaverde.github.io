@@ -1,4 +1,4 @@
-<img src="./images/euzinha.png" width="300">
+<img src="./images/euzinha.webp" width="300">
 
 # Mima's Portfolio
 **Welcome to my portfolio repository!** 🎨
