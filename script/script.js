@@ -123,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const isChecked = togglenav.checked;
 
         if(isChecked){
-            console.log('aqui');
             togglenav.click();
         }
 
