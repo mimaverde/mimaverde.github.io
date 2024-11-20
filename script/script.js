@@ -116,6 +116,19 @@ document.addEventListener('DOMContentLoaded', () => {
         togglenav.click();
     });
 
+    const logoNav = document.getElementById('logoLink');
+
+    logoNav.addEventListener('click', function(e) {
+        
+        const isChecked = togglenav.checked;
+
+        if(isChecked){
+            console.log('aqui');
+            togglenav.click();
+        }
+
+    });
+
     //Send the contact email
     const form = document.getElementById("myContact");
   

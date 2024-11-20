@@ -7,7 +7,7 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 830px) {
     header {
         width: calc(100% - 1rem);
         padding: 10px;
@@ -22,10 +22,30 @@ header {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 830px) {
     header {
-        background-color: transparent;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
+}
+
+.header-logo {
+    margin-left: 1rem;
+    z-index: 4;
+}
+
+@media screen and (max-width: 830px) {
+    .header-logo {
+        margin: 1.3rem 1rem;
+    }
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__nav {
@@ -123,7 +143,7 @@ header {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 830px) {
     .nav__mobile {
         display: block;
     }
