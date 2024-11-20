@@ -75,9 +75,11 @@ header {
     transition: all 0.3 ease;
 }
 
-.header__nav .nav__link[aria-current="page"] {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
+@media screen and (max-width: 830px) {
+    .header__nav .nav__link[aria-current="page"] {
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+    }
 }
 
 .nav__mobile {
