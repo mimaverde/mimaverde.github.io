@@ -75,7 +75,7 @@ header {
     transition: all 0.3 ease;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (min-width: 830px) {
     .header__nav .nav__link[aria-current="page"] {
         color: var(--primary-color);
         background-color: var(--secondary-color);

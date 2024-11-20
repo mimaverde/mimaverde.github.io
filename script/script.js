@@ -117,15 +117,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const logoNav = document.getElementById('logoLink');
+    const goHome = document.getElementById('goHome');
 
     logoNav.addEventListener('click', function(e) {
-        
+        e.preventDefault();
+        goHome.click();
+
         const isChecked = togglenav.checked;
 
         if(isChecked){
             togglenav.click();
         }
-
     });
 
     //Send the contact email
