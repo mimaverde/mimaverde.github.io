@@ -130,36 +130,60 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //Send the contact email
+    // Select the form and the status message element
     const form = document.getElementById("myContact");
-  
-    async function handleSubmit(event) {
-        event.preventDefault();
-        const status = document.getElementById("myStatus");
-        const data = new FormData(event.target);
+    const status = document.getElementById("myStatus");
 
-        fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
+    // Function to handle form submission
+    async function handleSubmit(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        // Get the reCAPTCHA token
+        const recaptchaToken = grecaptcha.getResponse();
+        if (!recaptchaToken) {
+            // If reCAPTCHA is not completed, show an error message
+            status.innerHTML = "Please complete the reCAPTCHA.";
+            return;
         }
-        }).then(response => {
-            if (response.ok) {
-                status.innerHTML = "Thanks for your submission!";
-                form.reset();
-            } else {
-                response.json().then(data => {
-                if (Object.hasOwn(data, 'errors')) {
-                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                } else {
-                    status.innerHTML = "Oops! There was a problem submitting your form"
-                }
-                })
+
+        // Prepare the form data
+        const data = new FormData(event.target);
+        // Add the reCAPTCHA token to the form data
+        data.append('g-recaptcha-response', recaptchaToken);
+
+        // Send the form data using Fetch API
+        fetch(event.target.action, {
+            method: form.method, // Use the method defined in the form (POST)
+            body: data, // Attach the form data
+            headers: {
+                'Accept': 'application/json' // Expect JSON response
             }
-        }).catch(error => {
-            status.innerHTML = "Oops! There was a problem submitting your form"
-        });
+        })
+            .then(response => {
+                if (response.ok) {
+                    // If submission is successful, show a success message
+                    status.innerHTML = "Thanks for your submission!";
+                    form.reset(); // Reset the form fields
+                    grecaptcha.reset(); // Reset the reCAPTCHA widget
+                } else {
+                    // If there's an error, handle it
+                    response.json().then(data => {
+                        if (data.errors) {
+                            // Show specific error messages if available
+                            status.innerHTML = data.errors.map(error => error.message).join(", ");
+                        } else {
+                            // Show a general error message
+                            status.innerHTML = "Oops! There was a problem submitting your form.";
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                // Handle any network or unexpected errors
+                status.innerHTML = "Oops! There was a problem submitting your form.";
+            });
     }
+
+    // Attach the submit event listener to the form
     form.addEventListener("submit", handleSubmit);
 });
