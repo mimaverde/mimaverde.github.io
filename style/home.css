@@ -41,8 +41,13 @@
     margin: auto;
     z-index: 2;
     text-align: center;
-    animation: showUp 0.5s ease-in;
     padding: 100px 0;
+}
+
+@media screen and (min-width: 769px) {
+    .content {
+        animation: showUp 0.5s ease-in;
+    }
 }
 
 .content--small {
