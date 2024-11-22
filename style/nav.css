@@ -37,8 +37,15 @@ header {
 }
 
 @media screen and (max-width: 830px) {
+    .header-logo img {
+        width: 2rem;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 830px) {
     .header-logo {
-        margin: 1.3rem 1rem;
+        margin: 0.9rem 1rem;
     }
 }
 
@@ -85,8 +92,9 @@ header {
 .nav__mobile {
     position: absolute;
     display: none;
-    top: 32px;
-    right: 32px;
+    top: 1.2rem;
+    right: 1rem;
+    transform: scale(0.5);
 }
 
 .burger-wrapper {
