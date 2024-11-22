@@ -13,14 +13,20 @@
     <meta property="og:url" content="https://mimaverde.github.io/" />
     <meta property="og:type" content="website" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X5BDBPTMXT"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        window.addEventListener('load', function () {
+            var gtmScript = document.createElement('script');
+            gtmScript.async = true;
+            gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-X5BDBPTMXT';
+            document.head.appendChild(gtmScript);
 
-        gtag('config', 'G-X5BDBPTMXT');
+            gtmScript.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-X5BDBPTMXT');
+            };
+        });
     </script>
 
     <link rel="icon" href="./images/icon.webp" type="image/png">
@@ -33,7 +39,7 @@
     <header class="header">
         <div class="header__container">
             <a href="#home" data-content="home" class="header-logo" id="logoLink" aria-label="Go to home page">
-                <img src="./images/logo-mima-w.webp" alt="Mima Logo" width="60" height="66">
+                <img src="./images/logo-mima-w.webp" alt="Mima Logo" width="60" height="66" loading="lazy">
             </a>
             <nav class="header__nav" id="menu" role="navigation" aria-label="Main menu" aria-expanded="false">
                 <ul id="myMenu" role="menubar" class="mobile">
@@ -104,15 +110,20 @@
                 </div>
                 <ul class="block__social-media" aria-labelledby="social-media">
                     <li><a href="mailto:verdemima@gmail.com" target="_blank" aria-label="Email"><img
-                                src="./images/icon-email.webp" alt="Email icon" width="512" height="512"></a></li>
+                                src="./images/icon-email.webp" alt="Email icon" width="512" height="512"
+                                loading="lazy"></a></li>
                     <li><a href="https://www.linkedin.com/in/mileidesilva/" target="_blank" aria-label="Linkedin"><img
-                                src="./images/icon-linkedin.webp" alt="Linkedin Icon" width="512" height="512"></a></li>
+                                src="./images/icon-linkedin.webp" alt="Linkedin Icon" width="512" height="512"
+                                loading="lazy"></a></li>
                     <li><a href="https://github.com/mimaverde" target="_blank" aria-label="Githhub"><img
-                                src="./images/icon-github.webp" alt="github Icon" width="512" height="512"></a></li>
+                                src="./images/icon-github.webp" alt="github Icon" width="512" height="512"
+                                loading="lazy"></a></li>
                     <li><a href="https://codepen.io/MimaVerde" target="_blank" aria-label="Codepen"><img
-                                src="./images/icon-codepen.webp" alt="Codepen Icon" width="512" height="512"></a></li>
+                                src="./images/icon-codepen.webp" alt="Codepen Icon" width="512" height="512"
+                                loading="lazy"></a></li>
                     <li><a href="https://open.spotify.com/user/mimaverde" target="_blank" aria-label="Spotify"><img
-                                src="./images/icon-spotify.webp" alt="Spotify Icon" width="512" height="512"></a></li>
+                                src="./images/icon-spotify.webp" alt="Spotify Icon" width="512" height="512"
+                                loading="lazy"></a></li>
                 </ul>
             </div>
         </div>
@@ -278,7 +289,7 @@
                     </a>
                     <a href="https://www.linkedin.com/in/mileidesilva/" target="_blank"><img
                             src="./images/logo-linkedin.webp" alt="Logo Linkedin" width="140" height="88"
-                            class="block__logo"></a>
+                            class="block__logo" loading="lazy"></a>
                 </div>
             </div>
         </div>
@@ -291,7 +302,8 @@
                 <div class="work">
                     <a href="https://vetorzero.com.br/" target="_blank">
                         <div class="work__shot">
-                            <img src="./images/img-vetor.webp" width="1000" height="757" alt="Site Vetor Zero">
+                            <img src="./images/img-vetor.webp" width="1000" height="757" alt="Site Vetor Zero"
+                                loading="lazy">
                         </div>
                         <h3>Vetor Zero</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor"
@@ -314,7 +326,8 @@
                 <div class="work">
                     <a href="https://portagecars.co.nz/" target="_blank">
                         <div class="work__shot">
-                            <img src="./images/img-portage-cars.webp" width="1000" height="758" alt="Site Portage Cars">
+                            <img src="./images/img-portage-cars.webp" width="1000" height="758" alt="Site Portage Cars"
+                                loading="lazy">
                         </div>
                         <h3>Portage Cars</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor"
@@ -339,7 +352,7 @@
                     <a href="https://www.hillaryoutdoors.co.nz/" target="_blank">
                         <div class="work__shot">
                             <img src="./images/img-hillary-outdoors.webp" width="1000" height="756"
-                                alt="Site Hillary Outdoors">
+                                alt="Site Hillary Outdoors" loading="lazy">
                         </div>
                         <h3>Hillary Outdoors</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor"
@@ -361,7 +374,8 @@
                 <div class="work">
                     <a href="https://www.apexequipment.co.nz/" target="_blank">
                         <div class="work__shot">
-                            <img src="./images/img-apex.webp" width="1000" height="756" alt="Site Apex Equipment">
+                            <img src="./images/img-apex.webp" width="1000" height="756" alt="Site Apex Equipment"
+                                loading="lazy">
                         </div>
                         <h3>Apex Equipment</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor"
@@ -383,7 +397,8 @@
                 <div class="work">
                     <a href="https://www.assetz.com.br/pt/" target="_blank">
                         <div class="work__shot">
-                            <img src="./images/img-assetz.webp" width="1000" height="758" alt="Site Assetz">
+                            <img src="./images/img-assetz.webp" width="1000" height="758" alt="Site Assetz"
+                                loading="lazy">
                         </div>
                         <h3>Assetz</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                             class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
@@ -406,7 +421,8 @@
                 <div class="work">
                     <a href="https://www.trovaomidia.com/" target="_blank">
                         <div class="work__shot">
-                            <img src="./images/img-trovao.webp" width="1000" height="749" alt="Site Trovão Mídia">
+                            <img src="./images/img-trovao.webp" width="1000" height="749" alt="Site Trovão Mídia"
+                                loading="lazy">
                         </div>
                         <h3>Trovão Mídia</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor"
@@ -479,15 +495,20 @@
             </div>
             <ul class="block__social-media" aria-labelledby="social-media">
                 <li><a href="mailto:verdemima@gmail.com" target="_blank" aria-label="Email"><img
-                            src="./images/icon-email.webp" alt="Email icon" width="512" height="512"></a></li>
+                            src="./images/icon-email.webp" alt="Email icon" width="512" height="512" loading="lazy"></a>
+                </li>
                 <li><a href="https://www.linkedin.com/in/mileidesilva/" target="_blank" aria-label="Linkedin"><img
-                            src="./images/icon-linkedin.webp" alt="Linkedin Icon" width="512" height="512"></a></li>
+                            src="./images/icon-linkedin.webp" alt="Linkedin Icon" width="512" height="512"
+                            loading="lazy"></a></li>
                 <li><a href="https://github.com/mimaverde" target="_blank" aria-label="Githhub"><img
-                            src="./images/icon-github.webp" alt="github Icon" width="512" height="512"></a></li>
+                            src="./images/icon-github.webp" alt="github Icon" width="512" height="512"
+                            loading="lazy"></a></li>
                 <li><a href="https://codepen.io/MimaVerde" target="_blank" aria-label="Codepen"><img
-                            src="./images/icon-codepen.webp" alt="Codepen Icon" width="512" height="512"></a></li>
+                            src="./images/icon-codepen.webp" alt="Codepen Icon" width="512" height="512"
+                            loading="lazy"></a></li>
                 <li><a href="https://open.spotify.com/user/mimaverde" target="_blank" aria-label="Spotify"><img
-                            src="./images/icon-spotify.webp" alt="Spotify Icon" width="512" height="512"></a></li>
+                            src="./images/icon-spotify.webp" alt="Spotify Icon" width="512" height="512"
+                            loading="lazy"></a></li>
             </ul>
             <div class="footer__content">
                 <p>Handcrafted with
