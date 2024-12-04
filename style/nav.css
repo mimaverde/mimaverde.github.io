@@ -53,6 +53,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: var(--full-hd);
+    margin: 0 auto;
 }
 
 .header__nav {
