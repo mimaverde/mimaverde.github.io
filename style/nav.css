@@ -7,7 +7,7 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 863px) {
     header {
         width: calc(100% - 1rem);
         padding: 10px;
@@ -22,7 +22,7 @@ header {
     }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 862px) {
     header {
         background: rgba(0, 0, 0, 0.1);
         border-radius: 10px;
@@ -36,14 +36,14 @@ header {
     z-index: 4;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 862px) {
     .header-logo img {
         width: 2rem;
         height: auto;
     }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 862px) {
     .header-logo {
         margin: 0.9rem 1rem;
     }
@@ -156,7 +156,7 @@ header {
 }
 
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 862px) {
     .nav__mobile {
         display: block;
     }
